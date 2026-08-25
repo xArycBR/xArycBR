@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="570" height="340" viewBox="0 0 570 340" role="img" aria-labelledby="title desc">
+  <title id="title">CRM Mileto IA</title>
+  <desc id="desc">Card visual do CRM e atendimento inteligente para óticas.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1120"/><stop offset="1" stop-color="#17112C"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3B82F6"/><stop offset="1" stop-color="#A855F7"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <style>
+    .signal { stroke-dasharray:6 10; animation:dash 8s linear infinite; }
+    .live { animation:pulse 2s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+    .bubble { animation:float 4s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+    .bubble.b2 { animation-delay:-2s; }
+    @keyframes dash { to { stroke-dashoffset:-150; } }
+    @keyframes pulse { 0%,100%{opacity:.45;transform:scale(.85)} 50%{opacity:1;transform:scale(1.2)} }
+    @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-5px)} }
+    @media (prefers-reduced-motion: reduce) { .signal,.live,.bubble { animation:none; } }
+  </style>
+
+  <rect width="570" height="340" rx="22" fill="url(#bg)"/>
+  <rect x="24" y="24" width="522" height="292" rx="18" fill="#0A0F1C" stroke="#30284C"/>
+  <rect x="24" y="24" width="522" height="5" rx="2.5" fill="url(#accent)"/>
+
+  <circle class="live" cx="52" cy="57" r="5" fill="#A855F7" filter="url(#glow)"/>
+  <text x="66" y="61" fill="#CE9CFF" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">PRODUTO EM PRODUÇÃO</text>
+
+  <text x="48" y="110" fill="#F7F5FF" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="750">CRM Mileto IA</text>
+  <text x="48" y="138" fill="#9E99B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">Atendimento e relacionamento feitos para óticas.</text>
+
+  <g class="bubble">
+    <rect x="48" y="168" width="204" height="48" rx="16" fill="#121B31" stroke="#2F4670"/>
+    <circle cx="72" cy="192" r="8" fill="#3B82F6" opacity="0.8"/>
+    <path d="M92 184h126M92 195h91" stroke="#6F83A8" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <g class="bubble b2">
+    <rect x="282" y="168" width="238" height="48" rx="16" fill="#1B1530" stroke="#4D3470"/>
+    <circle cx="306" cy="192" r="8" fill="#A855F7" opacity="0.85"/>
+    <path d="M326 184h157M326 195h112" stroke="#8E72B0" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <path class="signal" d="M56 246C130 224 167 272 241 246S352 220 510 247" fill="none" stroke="url(#accent)" stroke-width="2"/>
+  <g fill="#7F7A99" font-family="Segoe UI, Arial, sans-serif" font-size="10" letter-spacing="1">
+    <text x="48" y="270">ATENDIMENTO 24/7</text><text x="205" y="270">AGENDA</text><text x="310" y="270">FOLLOW-UP</text><text x="428" y="270">RELACIONAMENTO</text>
+  </g>
+
+  <text x="48" y="293" fill="#E2DDF0" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="650">ABRIR PRODUTO</text>
+  <path d="M475 286h38m0 0-9-9m9 9-9 9" fill="none" stroke="#A855F7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="0.75" y="0.75" width="568.5" height="338.5" rx="21.25" fill="none" stroke="#3D3159" stroke-width="1.5"/>
+</svg>

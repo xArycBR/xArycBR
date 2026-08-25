@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="570" height="340" viewBox="0 0 570 340" role="img" aria-labelledby="title desc">
+  <title id="title">Mileto Gestão Ótica</title>
+  <desc id="desc">Card visual do sistema de gestão completo para óticas.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0B1220"/><stop offset="1" stop-color="#0B1D27"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/><stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="glow"><feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <style>
+    .line { stroke-dasharray:7 10; animation:dash 10s linear infinite; }
+    .live { animation:pulse 2s ease-in-out infinite; transform-box:fill-box; transform-origin:center; }
+    @keyframes dash { to { stroke-dashoffset:-170; } }
+    @keyframes pulse { 0%,100%{opacity:.45;transform:scale(.85)} 50%{opacity:1;transform:scale(1.2)} }
+    @media (prefers-reduced-motion: reduce) { .line,.live { animation:none; } }
+  </style>
+
+  <rect width="570" height="340" rx="22" fill="url(#bg)"/>
+  <rect x="24" y="24" width="522" height="292" rx="18" fill="#0A111C" stroke="#22394A"/>
+  <rect x="24" y="24" width="522" height="5" rx="2.5" fill="url(#accent)"/>
+
+  <circle class="live" cx="52" cy="57" r="5" fill="#34D399" filter="url(#glow)"/>
+  <text x="66" y="61" fill="#80E8BE" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" letter-spacing="1.5">PRODUTO EM PRODUÇÃO</text>
+
+  <text x="48" y="110" fill="#F5FBFF" font-family="Segoe UI, Arial, sans-serif" font-size="29" font-weight="750">Mileto Gestão Ótica</text>
+  <text x="48" y="138" fill="#8FA6B8" font-family="Segoe UI, Arial, sans-serif" font-size="14">A operação inteira da ótica em um sistema.</text>
+
+  <g font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600">
+    <rect x="48" y="169" width="90" height="30" rx="15" fill="#102632" stroke="#1C4858"/><text x="93" y="189" text-anchor="middle" fill="#9DECF4">Vendas</text>
+    <rect x="146" y="169" width="74" height="30" rx="15" fill="#102632" stroke="#1C4858"/><text x="183" y="189" text-anchor="middle" fill="#9DECF4">OS</text>
+    <rect x="228" y="169" width="92" height="30" rx="15" fill="#102632" stroke="#1C4858"/><text x="274" y="189" text-anchor="middle" fill="#9DECF4">Estoque</text>
+    <rect x="328" y="169" width="105" height="30" rx="15" fill="#102632" stroke="#1C4858"/><text x="380" y="189" text-anchor="middle" fill="#9DECF4">Financeiro</text>
+    <rect x="441" y="169" width="78" height="30" rx="15" fill="#102632" stroke="#1C4858"/><text x="480" y="189" text-anchor="middle" fill="#9DECF4">NF-e</text>
+  </g>
+
+  <path class="line" d="M48 231H420" fill="none" stroke="url(#accent)" stroke-width="2"/>
+  <circle cx="48" cy="231" r="5" fill="#22D3EE"/><circle cx="173" cy="231" r="5" fill="#22D3EE"/><circle cx="298" cy="231" r="5" fill="#34D399"/><circle cx="420" cy="231" r="5" fill="#34D399"/>
+  <g fill="#71899A" font-family="Segoe UI, Arial, sans-serif" font-size="10" letter-spacing="1">
+    <text x="48" y="253">ORÇAMENTO</text><text x="151" y="253">PRODUÇÃO</text><text x="278" y="253">ENTREGA</text><text x="400" y="253">RESULTADO</text>
+  </g>
+
+  <text x="48" y="293" fill="#DAE7EF" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="650">ABRIR PRODUTO</text>
+  <path d="M475 286h38m0 0-9-9m9 9-9 9" fill="none" stroke="#22D3EE" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="0.75" y="0.75" width="568.5" height="338.5" rx="21.25" fill="none" stroke="#264356" stroke-width="1.5"/>
+</svg>

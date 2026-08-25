@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">Gabriel Almeida — Engenharia de Software</title>
+  <desc id="desc">Banner animado com identidade visual em grafite, azul e ciano.</desc>
+
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#070B12"/>
+      <stop offset="0.55" stop-color="#0B1220"/>
+      <stop offset="1" stop-color="#07121A"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22D3EE"/>
+      <stop offset="0.55" stop-color="#3B82F6"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <radialGradient id="orb" cx="50%" cy="50%" r="50%">
+      <stop offset="0" stop-color="#22D3EE" stop-opacity="0.24"/>
+      <stop offset="1" stop-color="#22D3EE" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="#93C5FD" stroke-opacity="0.055"/>
+    </pattern>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <clipPath id="frame"><rect x="0" y="0" width="1200" height="360" rx="24"/></clipPath>
+  </defs>
+
+  <style>
+    .flow { stroke-dasharray: 10 18; animation: dash 16s linear infinite; }
+    .flow.slow { animation-duration: 24s; animation-direction: reverse; }
+    .orbit { transform-origin: 985px 181px; animation: rotate 28s linear infinite; }
+    .pulse { animation: pulse 3.2s ease-in-out infinite; transform-box: fill-box; transform-origin: center; }
+    .pulse.delay { animation-delay: -1.6s; }
+    .caret { animation: blink 1s steps(2, end) infinite; }
+    @keyframes dash { to { stroke-dashoffset: -280; } }
+    @keyframes rotate { to { transform: rotate(360deg); } }
+    @keyframes pulse { 0%,100% { opacity:.28; transform:scale(.92) } 50% { opacity:.9; transform:scale(1.08) } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) {
+      .flow,.orbit,.pulse,.caret { animation: none; }
+    }
+  </style>
+
+  <g clip-path="url(#frame)">
+    <rect width="1200" height="360" fill="url(#bg)"/>
+    <rect width="1200" height="360" fill="url(#grid)"/>
+    <circle cx="1035" cy="80" r="270" fill="url(#orb)"/>
+    <circle cx="80" cy="380" r="260" fill="url(#orb)" opacity="0.4"/>
+
+    <path class="flow" d="M-50 287 C190 220 280 338 505 260 S785 105 1240 142" fill="none" stroke="url(#accent)" stroke-width="1.5" opacity="0.38"/>
+    <path class="flow slow" d="M-40 312 C235 246 344 363 590 272 S830 137 1235 205" fill="none" stroke="#22D3EE" stroke-width="1" opacity="0.2"/>
+
+    <g opacity="0.72">
+      <circle cx="985" cy="181" r="78" fill="none" stroke="#22D3EE" stroke-opacity="0.22"/>
+      <circle cx="985" cy="181" r="116" fill="none" stroke="#3B82F6" stroke-opacity="0.16" stroke-dasharray="5 11"/>
+      <g class="orbit">
+        <circle cx="985" cy="65" r="5" fill="#22D3EE" filter="url(#glow)"/>
+        <circle cx="1063" cy="239" r="4" fill="#8B5CF6"/>
+        <circle cx="907" cy="239" r="3" fill="#3B82F6"/>
+      </g>
+      <rect x="942" y="138" width="86" height="86" rx="20" fill="#0F2032" stroke="url(#accent)" stroke-width="1.5"/>
+      <path d="M967 162h36M967 181h22M967 200h36" stroke="#E6F7FF" stroke-width="4" stroke-linecap="round"/>
+      <circle class="pulse" cx="1030" cy="162" r="5" fill="#22D3EE"/>
+      <circle class="pulse delay" cx="1008" cy="181" r="5" fill="#3B82F6"/>
+    </g>
+
+    <rect x="70" y="54" width="206" height="32" rx="16" fill="#0C1C2A" stroke="#1D3B50"/>
+    <circle cx="91" cy="70" r="5" fill="#22D3EE" filter="url(#glow)"/>
+    <text x="107" y="75" fill="#A7C7D9" font-family="Segoe UI, Arial, sans-serif" font-size="12" font-weight="600" letter-spacing="1.6">SOFTWARE · PRODUCT · WEB</text>
+
+    <text x="68" y="154" fill="#F7FBFF" font-family="Segoe UI, Arial, sans-serif" font-size="56" font-weight="750" letter-spacing="7">GABRIEL ALMEIDA</text>
+    <rect x="70" y="176" width="565" height="3" rx="1.5" fill="url(#accent)"/>
+    <text x="70" y="218" fill="#B9C9D8" font-family="Segoe UI, Arial, sans-serif" font-size="22" font-weight="450">Engenharia de Software orientada a produto</text>
+
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="600">
+      <text x="70" y="264" fill="#67E8F9">&gt;</text>
+      <text x="91" y="264" fill="#D9E8F2">interfaces claras para operações complexas</text>
+      <rect class="caret" x="405" y="249" width="8" height="19" rx="2" fill="#22D3EE"/>
+    </g>
+
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="12" fill="#7890A3" letter-spacing="1.1">
+      <text x="70" y="318">FRONT-END ENGINEERING</text>
+      <circle cx="245" cy="314" r="2.5" fill="#22D3EE"/>
+      <text x="262" y="318">PRODUCT SYSTEMS</text>
+      <circle cx="397" cy="314" r="2.5" fill="#3B82F6"/>
+      <text x="414" y="318">DIGITAL EXPERIENCES</text>
+    </g>
+  </g>
+  <rect x="0.75" y="0.75" width="1198.5" height="358.5" rx="23.25" fill="none" stroke="#26384A" stroke-opacity="0.8" stroke-width="1.5"/>
+</svg>
